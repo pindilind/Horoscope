@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("stars.jpg");
+    object-fit: cover;
+  
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 350px;
+    width: 100%;
+    font-size: 150px;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: 'East Sea Dokdo', cursive;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'East Sea Dokdo', cursive;
+    margin-top: 10px;
+
+}
+
+#menyDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -110px;
+}
+
+#inputDay {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    margin: 2px;
+    border-radius: 12px;
+    border-style: solid black;
+    border-width: 1px;;
+    font-size: 15px;
+}
+
+#inputMonth {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    height: 40px;
+    margin: 2px;
+    border-radius: 12px;
+    border-style: solid black;
+    border-width: 1px;
+    font-size: 15px;
+}
+
+
+#saveBtn {
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    height: 40px;
+    width: 70px;
+    border-radius: 12px;
+    background-color: rgb(38, 14, 78);
+    color: white;
+    border: 1px solid black;
+    
+}
+#saveBtn:hover {
+    background-color: rgba(28, 18, 73, 0.685);
+}
+
+
+#getBtn {
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    height: 40px;
+    width: 70px;
+    border-radius: 12px;
+    background-color: rgb(38, 14, 78);
+    color: white;
+    border: 1px solid black;
+
+}
+#getBtn:hover {
+    background-color: rgba(28, 18, 73, 0.685);
+}
+
+#updateBtn {
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 70px;
+    border-radius: 12px;
+    background-color: rgb(38, 14, 78);
+    color: white;
+    border: 1px solid black;
+    margin: 2px;
+
+}
+
+#updateBtn:hover {
+    background-color: rgba(28, 18, 73, 0.685);
+}
+
+#deleteBtn {
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 70px;
+    border-radius: 12px;
+    background-color: rgb(38, 14, 78);
+    color: white;
+    border: 1px solid black;
+    margin: 2px;
+}
+
+#deleteBtn:hover {
+    background-color: rgba(28, 18, 73, 0.685);
+}
+
+#menyDivTwo {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+#seeHoroscope {
+    display: flex;
+    font-size: 70px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
