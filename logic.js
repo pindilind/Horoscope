@@ -1,9 +1,8 @@
 window.addEventListener("load", initsite)
-document.getElementById("getBtn").addEventListener("click", getHoroscope)
 document.getElementById("saveBtn").addEventListener("click", saveHoroscope)
 
 function initsite() {
-    
+    getHoroscope()
 }
 
 
@@ -22,6 +21,7 @@ async function saveHoroscope() {
 
     const collectedHoroscope = await request("./API/addHoroscope.php", "POST", body)
     console.log(collectedHoroscope)
+    getHoroscope()
 }
 
 
@@ -31,7 +31,6 @@ async function getHoroscope() {
     console.log(collectedHoroscope)
     horoscopeinput.innerText = collectedHoroscope
 }
-
 
 
 async function request(path, method, body) {

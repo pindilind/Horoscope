@@ -5,7 +5,6 @@
 body {
     background-image: url("stars.jpg");
     object-fit: cover;
-  
 }
 
 header {
@@ -77,26 +76,8 @@ h3 {
     background-color: rgb(38, 14, 78);
     color: white;
     border: 1px solid black;
-    
 }
 #saveBtn:hover {
-    background-color: rgba(28, 18, 73, 0.685);
-}
-
-
-#getBtn {
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
-    height: 40px;
-    width: 70px;
-    border-radius: 12px;
-    background-color: rgb(38, 14, 78);
-    color: white;
-    border: 1px solid black;
-
-}
-#getBtn:hover {
     background-color: rgba(28, 18, 73, 0.685);
 }
 
