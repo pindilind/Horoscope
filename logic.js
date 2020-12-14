@@ -1,5 +1,6 @@
 window.addEventListener("load", initsite)
 document.getElementById("saveBtn").addEventListener("click", saveHoroscope)
+document.getElementById("deleteBtn").addEventListener("click", deleteHoroscope)
 
 function initsite() {
     getHoroscope()
@@ -22,6 +23,7 @@ async function saveHoroscope() {
     const collectedHoroscope = await request("./API/addHoroscope.php", "POST", body)
     console.log(collectedHoroscope)
     getHoroscope()
+
 }
 
 
@@ -31,6 +33,11 @@ async function getHoroscope() {
     console.log(collectedHoroscope)
     horoscopeinput.innerText = collectedHoroscope
 }
+
+ async function deleteHoroscope() {
+    const collectedHoroscope = await request("./API/deleteHoroscope.php", "DELETE")
+    console.log(collectedHoroscope)
+} 
 
 
 async function request(path, method, body) {
