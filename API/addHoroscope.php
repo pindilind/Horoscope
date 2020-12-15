@@ -10,7 +10,7 @@ function horoscope($day, $month)
         elseif (($month == 5 && $day > 20 ) || ($month == 6 && $day < 23 )) { $horoscope = "Tvillingarna"; }
         elseif (($month == 6 && $day > 20 ) || ($month == 7 && $day < 23 )) { $horoscope = "Kräftan"; }
         elseif (($month == 7 && $day > 22 ) || ($month == 8 && $day < 23 )) { $horoscope = "Lejonet"; }
-        elseif (($month == 8 && $day > 22 ) || ($month == 9 && $day < 23 )) { $horoscope = "Jungru"; }
+        elseif (($month == 8 && $day > 22 ) || ($month == 9 && $day < 23 )) { $horoscope = "Jungfru"; }
         elseif (($month == 9 && $day > 22 ) || ($month == 10 && $day < 23 )) { $horoscope = "Vågen"; }
         elseif (($month == 10 && $day > 22 ) || ($month == 11 && $day < 22 )) { $horoscope = "Skorpionen"; }
         elseif (($month == 11 && $day > 21 ) || ($month == 12 && $day < 22 )) { $horoscope = "Skytten"; }
@@ -32,10 +32,21 @@ try {
         if($_SERVER["REQUEST_METHOD"] === "POST") {
             //REQUEST_METHOD är POST
 
+            if(isset($_SESSION["Horoscope"])) {
+
+                echo json_encode(false);
+                exit;
+            }
+
             //kollar om det finns sparat på body
             if(isset($_POST["day"]) && isset($_POST["month"]))  {
                 
                 $yourHoroscope = horoscope($_POST["day"],$_POST["month"]);
+
+                if(empty($yourHoroscope)) {
+                    throw new Exception("Horoscope could not be calculated");
+                }
+
                 //sparar $_POST horoscope går till session
                 $_SESSION["Horoscope"] = serialize($yourHoroscope);
                 
@@ -49,7 +60,7 @@ try {
        
         } else { 
             //denna visas om inget siffror va inkluderarde
-            throw new Exception("Not a valid request...", 404);
+            throw new Exception("Not a valid request...", 400);
         }
 
     } 

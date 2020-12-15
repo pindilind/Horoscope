@@ -7,27 +7,24 @@ try {
     //Kollar om en request har gjorts
     if(isset($_SERVER["REQUEST_METHOD"])) {
 
-        if($_SERVER["REQUEST_METHOD"] === "POST") {
-            //REQUEST_METHOD är POST
+        if($_SERVER["REQUEST_METHOD"] === "DELETE") {
+            //REQUEST_METHOD är DELETE
 
-            //kollar om det finns sparat på body
-            if(isset($_POST["day"]) && isset($_POST["month"]))  {
+            if(isset($_SESSION["Horoscope"])) {
                 
-                $yourHoroscope = horoscope($_POST["day"],$_POST["month"]);
-                //ta bort $_POST horoscope går till session
                 unset($_SESSION["Horoscope"]);
-                
+
                 echo json_encode(true);
                 exit;
-                
+
             } else {
-               
-                throw new Exception("No birthday is set to body... :( ", 500);
+                echo json_encode(false);
+                exit;
             }
        
         } else { 
-            //denna visas om inget siffror va inkluderarde
-            throw new Exception("Not a valid request...", 404);
+            //om metoden inte är delete ska den inte svara
+            throw new Exception("Not a valid request...", 400);
         }
 
     } 

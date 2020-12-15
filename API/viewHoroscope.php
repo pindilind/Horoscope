@@ -18,12 +18,12 @@ try {
                 echo json_encode(unserialize($_SESSION["Horoscope"]));
                 exit;
             } else {
-                //skickar feedback att inget namn är sparat
+                //skickar feedback att inget horoskop är sparat
                 echo json_encode("No horoscope is saved...");
                 exit;
             }
         } else {
-            throw new Exception("Not a valid request...", 404);
+            throw new Exception("Not a valid request...", 400);
         }
     }
 } catch (Exception $error) {
