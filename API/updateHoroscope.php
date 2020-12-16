@@ -54,7 +54,7 @@ try {
        
         } else { 
             //denna visas om inget siffror va inkluderarde
-            throw new Exception("Not a valid request...", 400);
+            throw new Exception("Not a valid request...", 405);
         }
 
     } 

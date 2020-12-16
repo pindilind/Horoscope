@@ -29,7 +29,6 @@ h3 {
     font-size: 30px;
     font-family: 'East Sea Dokdo', cursive;
     margin-top: 10px;
-
 }
 
 #menyDiv {
@@ -39,13 +38,11 @@ h3 {
     margin-top: -110px;
 }
 
-
-
 #inputDate {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 200px;
+    width: 150px;
     height: 40px;
     margin: 2px;
     border-radius: 12px;
@@ -54,40 +51,7 @@ h3 {
     font-size: 15px;
 }
 
-
-#saveBtn {
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
-    height: 40px;
-    width: 70px;
-    border-radius: 12px;
-    background-color: rgb(38, 14, 78);
-    color: white;
-    border: 1px solid black;
-}
-#saveBtn:hover {
-    background-color: rgba(28, 18, 73, 0.685);
-}
-
-#updateBtn {
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 70px;
-    border-radius: 12px;
-    background-color: rgb(38, 14, 78);
-    color: white;
-    border: 1px solid black;
-    margin: 2px;
-
-}
-
-#updateBtn:hover {
-    background-color: rgba(28, 18, 73, 0.685);
-}
-
-#deleteBtn {
+.btn {
     justify-content: center;
     align-items: center;
     height: 40px;
@@ -99,7 +63,7 @@ h3 {
     margin: 2px;
 }
 
-#deleteBtn:hover {
+.btn:hover {
     background-color: rgba(28, 18, 73, 0.685);
 }
 
@@ -107,7 +71,6 @@ h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-   
 }
 
 #seeHoroscope {
@@ -117,5 +80,4 @@ h3 {
     justify-content: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    
 }

@@ -23,7 +23,7 @@ try {
                 exit;
             }
         } else {
-            throw new Exception("Not a valid request...", 400);
+            throw new Exception("Not a valid request...", 405);
         }
     }
 } catch (Exception $error) {
