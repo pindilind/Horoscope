@@ -13,7 +13,6 @@ try {
             if (isset($_SESSION["Horoscope"])) {
 
                 unset($_SESSION["Horoscope"]);
-
                 echo json_encode(true);
                 exit;
             } else {
